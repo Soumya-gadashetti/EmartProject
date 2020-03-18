@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  
+    <div class="container">
+        
+        <div class="row justify-content-center">
+        <div class="col-md-6">
+        <div class="card">
+        <header class="card-header">
+            <a href="seller" class="float-right btn btn-outline-primary mt-1">Seller</a>
+            <h4 class="card-title mt-2">Sign up</h4>
+        </header>
+        <article class="card-body">
+          <form name="form" (ngSubmit)="save()" #f="ngForm" >
+          <!-- <div class="form-group"> -->
+            <!-- <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="user" value="buyer" />
+          <span class="form-check-label"> Buyer </span>
+        </label> -->
+        <!-- <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="user" value="seller" />
+          <span class="form-check-label"> Seller</span>
+        </label> -->
+    <!-- </div> -->
+            <div class="form-row">
+                <div class="col form-group">
+                    <label>First name </label>   
+                    <input type="text" name="firstName" class="form-control" [(ngModel)]="buyer.firstName"   required>
+                    <!-- <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback">
+                        <div *ngIf="firstName.errors.required">First Name is required</div>-->
+                    <!-- </div>  -->
+                  </div> <!-- form-group end.// -->
+                <div class="col form-group">
+                    <label>Last name</label>
+                    <input type="text" name="lastName" class="form-control" [(ngModel)]="buyer.lastName"   required>
+                    <!-- <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                        <div *ngIf="lastName.errors.required">Last Name is required</div>-->
+                    <!-- </div> -->
+                      
+                </div> <!-- form-group end.// -->
+            </div> <!-- form-row end.// -->
+            <!-- <div class="form-group">
+                <label>Email address</label>
+                <input type="email" class="form-control" placeholder="email" required>
+                <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div> form-group end.// -->
+            <!-- form-group end.// -->
+            
+            <!-- <div class="form-group">
+                <label>Create password</label>
+                <input class="form-control" type="password">
+            </div> form-group end.//   -->
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" name="email" class="form-control" [(ngModel)]="buyer.emailId"   required >
+                <!-- <div *ngIf="f.submitted && email.invalid" class="invalid-feedback"> -->
+                    <!-- <div *ngIf="email.errors.required">Email is required</div>
+                    <div *ngIf="email.errors.email">Email must be a valid email address</div> -->
+                <!-- </div> -->
+            </div>
+            <div class="form-row">
+              <div class="form-group col">
+                  <label>Mobile Number</label>
+                  <input type="text" name="mobile-number" class="form-control" [(ngModel)]="buyer.mobileNumber"   required >
+                  <!-- <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
+                      <div *ngIf="password.errors.required">Password is required</div>
+                      <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+                  </div> -->
+              </div>
+              <div class="form-group col">
+                  <label>Password</label>
+                  <input type="password" name="Password" class="form-control" [(ngModel)]="buyer.password" required>
+                  <!-- <div *ngIf="f.submitted && confirmPassword.invalid" class="invalid-feedback">
+                      <div *ngIf="confirmPassword.errors.required">Confirm Password is required</div>
+                      <div *ngIf="confirmPassword.errors.mustMatch">Passwords must match</div>
+                  </div> -->
+              </div>
+          </div>
+          <!-- <div class="form-group form-check">
+            <input type="checkbox" name="acceptTerms" id="acceptTerms" class="form-check-input" [(ngModel)]="model.acceptTerms" #acceptTerms="ngModel" [ngClass]="{ 'is-invalid': f.submitted && acceptTerms.invalid }" required>
+            <label for="acceptTerms" class="form-check-label">Accept Terms & Conditions</label>
+            <div *ngIf="f.submitted && acceptTerms.invalid" class="invalid-feedback">Accept Ts & Cs is required</div>
+        </div> -->
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block" (click)="ngSubmit"> Register  </button>
+            </div> <!-- form-group// -->      
+            <small class="text-muted">By clicking the 'Register' button, you confirm that you accept our <br> Terms of use and Privacy Policy.</small>                                          
+        </form>
+        </article> <!-- card-body end .// -->
+        <div class="border-top card-body text-center">Have an account? <a href="register">Log In</a></div>
+        </div> <!-- card.// -->
+        </div> <!-- col.//-->
+        
+        </div> <!-- row.//-->
+        
+        
+        </div> 
+        <!--container end.//-->
+       
+</body>
+</html>
